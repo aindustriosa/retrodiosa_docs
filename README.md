@@ -2,5 +2,9 @@
 
 # Índice
 
-1. Software: 
-2. Hardware:
+## Software
+El código está en https://github.com/aindustriosa/retrodiosa_sw
+La documentación más en detalle está en este repositorio, leer ./modificaciones_retropie.md
+
+## Hardware
+Todavía no tenemos repo para este apartado :P
