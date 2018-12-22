@@ -28,7 +28,28 @@ Juegos sobre emuladores de consolas:
 
 N64:Se han probado diferentes juegos que van de forma fluida.
 
-# Incluir juegos custom en Emulation Station
+# Instalar el software custom de Retrodiosa
+
+Ejecutar el script de instalacion que se encuentra en el directorio raíz del proyecto https://github.com/aindustriosa/retrodiosa_sw
+
+1. Clonar el proyecto retrodiosa_sw
+
+```
+git clone https://github.com/aindustriosa/retrodiosa_sw.git
+```
+
+Ejecutar el script de instalación
+
+```
+./install_software.sh
+```
+
+Para añadir juegos de LibGDX la forma más cómoda es usar el servidor http que se encuentra en la dirección http://<dir-ip-servidor>:8000/
+
+Para incluir juegos de LibGDX hay que incluir el mapping de teclas a joystick. Ver sección [Json para el mapeo de teclas](#-mapping-de-joystick/teclas).
+
+
+# Incluir juegos custom en Emulation Station (Detallado: mejor usar el script de instalación)
 ## Añadir un nuevo sistema y theme a Emulation Station
 
 
@@ -238,13 +259,14 @@ apt install python3-http-parser
 ## Ejecutar el servidor HTTP (script servidor_retrodiosa.py)
 
 ```
-python3 /home/nicoyiago/retrodiosa_service/servidor_retrodiosa.py 8000 /home/nicoyiago/RetroPie/roms/aindustriosa /home/nicoyiago/retrodiosa_service/
+python3 /home/nicoyiago/retrodiosa_service/servidor_retrodiosa.py 8000 /home/nicoyiago/RetroPie/roms/aindustriosa /home/nicoyiago/retrodiosa_service/ /opt/retropie
 ```
 
 El script recibe como parámetros de entrada:
 1. El puerto donde escuchará peticiones el servicio  (8000)
 2. Carpeta donde se almacenarán las roms (Retropie/roms/aindustriosa/)
 3. Carpeta donde se encuentran los ficheros html ($HOME/retrodiosa_service/)
+4. Carpeta donde se ha realizado la instalación de Retropie
 
 ## Poner servidor web como servicio
 Revisar que la configuración del servicio es correcta en “retropie.service”. En este caso el usuario es nicoyiago. En ExecStart se introducen los parámetros del comando “servidor_retrodiosa.py” separados por espacios.
@@ -259,8 +281,7 @@ After=network.target
 Type=simple
 User=nicoyiago
 WorkingDirectory=/home/nicoyiago
-ExecStart=/home/nicoyiago/retrodiosa_service/servidor_retrodiosa.py 8000 /home/nicoyiago/RetroPie/roms/aindustriosa /home/nicoyiago/retrodio
-sa_service/
+ExecStart=/home/nicoyiago/retrodiosa_service/servidor_retrodiosa.py 8000 /home/nicoyiago/RetroPie/roms/aindustriosa /home/nicoyiago/retrodiosa_service/ /opt/retropie
 Restart=on-failure
 # Other Restart options: or always, on-abort, etc
 
