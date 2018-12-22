@@ -46,7 +46,7 @@ Ejecutar el script de instalación
 
 Para añadir juegos de LibGDX la forma más cómoda es usar el servidor http que se encuentra en la dirección http://<dir-ip-servidor>:8000/
 
-Para incluir juegos de LibGDX hay que incluir el mapping de teclas a joystick. Ver sección [Json para el mapeo de teclas](#mapping-de-joystick/teclas).
+Para incluir juegos de LibGDX hay que incluir el mapping de teclas a joystick. Ver sección [Json para el mapeo de teclas](#mapping-de-joystick-y-teclas).
 
 
 # Incluir juegos custom en Emulation Station (Detallado: mejor usar el script de instalación)
@@ -181,7 +181,7 @@ Una versión simplificada de este script sin hacer mapping del joystick se puede
 /opt/retropie/supplementary/runcommand/runcommand2.sh 0 "java -jar /home/nicoyiago/RetroPie/roms/aindustriosa/mightylints.jar" "mightylints"
 ```
 
-## Mapping de joystick/teclas
+## Mapping de joystick y teclas
 El objetivo es ejecutar los juegos de libgdx usando la recreativa. Sin embargo la mayoría de juegos de LIBGDX funcionan con teclado y no con gamepad. Aunque el juego tuviese la opción de usar un gamepad la configuración de los controles estaría fuera del control externo. 
 
 El fichero .json sirve para hacer el mapping entre los comandos del joystick (tal y como está configurado en Emulation Station) y las teclas usadas por el juego en LIBGDX.
