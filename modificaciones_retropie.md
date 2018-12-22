@@ -46,7 +46,7 @@ Ejecutar el script de instalación
 
 Para añadir juegos de LibGDX la forma más cómoda es usar el servidor http que se encuentra en la dirección http://<dir-ip-servidor>:8000/
 
-Para incluir juegos de LibGDX hay que incluir el mapping de teclas a joystick. Ver sección [Json para el mapeo de teclas](#-mapping-de-joystick/teclas).
+Para incluir juegos de LibGDX hay que incluir el mapping de teclas a joystick. Ver sección [Json para el mapeo de teclas](#mapping-de-joystick/teclas).
 
 
 # Incluir juegos custom en Emulation Station (Detallado: mejor usar el script de instalación)
