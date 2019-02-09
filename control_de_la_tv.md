@@ -24,12 +24,17 @@ Esta idea es mejor que la anterior, porque necesitaremos menos hardware extra y 
 Básicamente, hemos seguido estos pasos:
 
 En primer lugar, no sabemos cuales son los comandos del mando a distancia, por los que tenemos que averiguarlos:
+
 1. Pinchar un GPIO del Arduino a la salida del sensor de IR de la televisión.
+
 2. Grabar los comandos del mando a distancia usando uno de los ejemplos de la librería IRremote de Arduino.
 
 Para reproducir los comandos, conectamos el Arduino en el mismo lugar que en el paso 1 pero, esta vez, con un divisor de tensión, ya que la salida digital del Arduino es de 5 V y la placa es 3,3 V
+
 3. Cargar el sketch https://github.com/aindustriosa/retrodiosa_sw/blob/master/tv_control/arduino_sketch/retrodiosa_IR_bypass.ino 
+
 4. Conectar el Arduino al portátil.
+
 5. Se puede usar el script de https://github.com/aindustriosa/retrodiosa_sw/blob/master/tv_control/pc_command_line/tv_control.py o 'echos' a /dev/ttyUSB0 para enviar los comandos a la televisión.
 
 El sketch de Arduino intenta encender la TV cuando se alimenta, así la pantalla se enciende antes de que el portátil se lo ordene al arrancar la recreativa.
