@@ -300,6 +300,81 @@ chmod +x servidor_retrodiosa.py
 systemctl enable retrodiosa
 systemctl start retrodiosa
 ```
+
+## Background Music en Retrodiosa/Emulation Station
+
+Se usa el repositiorio de https://github.com/Rydra/bgm-for-es para añadir background music a Retrodiosa. Se usa una instalación manual aunque el proyecto se indica una forma más automatizada.
+
+Clonar el reposition con el siguiente comando
+
+```
+git clone https://github.com/Rydra/bgm-for-es.git
+```
+
+Requiere la instalación de pygame. Si se usa un entorno virtual instalar con:
+
+```
+pip install pygame
+```
+
+y en el directorio del proyecto instalar las librerías
+
+```
+pip install .
+```
+
+Esto instala el programa startbgm y también las librerías bgm en el entorno virtual.
+
+En el directorio del proyecto cfg está la configuración del servicio (fichero bgmconfig.in) que se deberá copiar al directorio /etc/
+
+```
+sudo cp cfg/bgmconfig.ini /etc/
+```
+
+Modificar previamente la carpeta donde se va a instalar la música:
+
+```
+musicdir = <your path to roms>/roms/music
+```
+
+El servicio están en service. La principal modificación que se debe hacer es cambiar el path para que se ejecute en el path donde se ha instalado el programa startbgm en el entorno virtual:
+
+```
+<virtual_env>/bin/startgbm
+```
+
+copiar el servicio al directorio /etc/systemd/system/
+
+Activar el servicio (como root)
+
+```
+systemctl enable bgm
+systemctl start bgm
+```
+
+### Test
+
+Para comprobar que la instalación ha funcionado correctamente
+
+1) Añadir música (en mp3 o ogg) al directorio <your path to roms>/roms/music
+
+2) ejecutar el script startbgm
+
+```
+<virtual_env>/bin/startgbm
+```
+
+3) Ejecutar emulationstation
+
+```
+emulationstation
+```
+
+Comprobar que se escucha la música de fondo
+
+## Controlar el ruido de background 
+
+
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
 2. Crear un setup para automatizar la instalación de los scripts y la configuración de sistemas custom de A Industriosa.
