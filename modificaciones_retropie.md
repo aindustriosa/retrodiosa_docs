@@ -31,6 +31,14 @@ La versión del script es la 4.4.3.
 
 Siguiendo estas instrucciones, nos crea un directorio RetroPie donde se instalarán las roms y juegos
 
+# Autostart (EmulationStation)
+
+El autostart de emulationstation se instala en
+
+```
+ $HOME/.config/autostart/retropie.desktop
+```
+
 #Pruebas
 Juegos sobre emuladores de consolas:
 
@@ -387,5 +395,6 @@ Comprobar que se escucha la música de fondo
 1. Limpiar/refactorizar el código de joylibgdxkey.py
 2. Crear un setup para automatizar la instalación de los scripts y la configuración de sistemas custom de A Industriosa.
 3. Splash Screen Retrodiosa/A Industriosa para emulation station
-4. Una web decente para subir los archivos (asignada a eLeDe).
+4. DBUS para apagar sin clave el portátil (desde emulationstation)
+5. Añadir menús para subir/bajar volumen de la pantalla
 
