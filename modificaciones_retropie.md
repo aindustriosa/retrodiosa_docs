@@ -15,6 +15,14 @@ OpenGL version string: 2.1 Mesa 13.0.6
 ```
 Necesitamos soporte de OpenGL 2.0 para libgdx así que este portátil cumple los requisitos mínimos.
 
+El sistema operativo es una Debian GNU Linux 9 (stretch) 64-bits. Kernel 4.9.65
+
+## Preparaciones del portátil
+
+1) Habilitar la sesión automática en el usuario (Pestaña de configuración Users/Usuarios).
+
+2) Deshabilitar el bloqueo automático de la sesión del usuario (Pestaña de configuración Privacy/Privacidad).
+
 # Instalación Retropie
 1. Se usa como base un S.O. Debian  https://xubuntu.org/download
 2. Se instala retropie siguiendo las instrucciones en https://retropie.org.uk/docs/Debian/. Se realiza la instalación básica.
