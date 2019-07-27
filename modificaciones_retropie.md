@@ -34,7 +34,9 @@ sudo visudo
 y luego añadir a la configuración la siguiente línea
 
 ```
-<youruser>	ALL=NOPASSWD:	/usr/sbin/shutdown
+<youruser>	ALL=NOPASSWD:	/sbin/shutdown
+<youruser>	ALL=NOPASSWD:	/sbin/reboot
+<youruser>	ALL=NOPASSWD:	/sbin/poweroff
 ```
 donde `<youruser>` es el usuario que ejecuta emulationstation.
 
