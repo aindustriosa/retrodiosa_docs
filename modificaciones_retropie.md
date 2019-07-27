@@ -23,6 +23,21 @@ El sistema operativo es una Debian GNU Linux 9 (stretch) 64-bits. Kernel 4.9.65
 
 2) Deshabilitar el bloqueo automático de la sesión del usuario (Pestaña de configuración Privacy/Privacidad).
 
+3) Ejecutar *shutdown* sin contraseña
+
+Para apagar el portátil desde emulationstation se debe ejecutar el comando shutdown sin que pida contraseña. Esto se puede cambiar con el comando `sudo visudo`.
+
+```
+sudo visudo
+```
+
+y luego añadir a la configuración la siguiente línea
+
+```
+<youruser>	ALL=NOPASSWD:	/usr/sbin/shutdown
+```
+donde `<youruser>` es el usuario que ejecuta emulationstation.
+
 # Instalación Retropie
 1. Se usa como base un S.O. Debian  https://xubuntu.org/download
 2. Se instala retropie siguiendo las instrucciones en https://retropie.org.uk/docs/Debian/. Se realiza la instalación básica.
