@@ -334,7 +334,70 @@ systemctl enable retrodiosa
 systemctl start retrodiosa
 ```
 
-## Background Music en Retrodiosa/Emulation Station
+## Background Music en Retrodiosa/Emulation Station (Current)
+
+_NOTA_: Esto no se incluye en el script de instalación y hay que realizarlo manualmente_
+
+Instalar mplayer de los repositorios (vale cualquier otro reproductor equivalente)
+
+Realizar los siguientes pasos:
+
+1) En el directorio */opt/retropie/configs/all/* crear y editar los siguientes scripts:
+
+El script *runcommand-onstart.sh*
+
+```
+pkill -STOP mplayer
+```
+
+El script *runcommand-onend.sh*
+
+```
+pkill -CONT mplayer
+```
+
+El script *autostart.sh* donde se configura el reproductor que funcionará en bucle cuando no se esté ejecutando un juego.
+
+```
+mplayer -volume 40 -shuffle -loop 0 <your path with music>/music_games/*.mp3 &
+
+```
+
+2) Dar permisos de ejecución a estos ficheros
+
+```
+chmod a+x autostart.sh runcommand-onstart.sh runcommand-onend.sh
+```
+
+3) Por último hay que añadir la llamada a *autostart.sh* desde el script de lanzamiento de emulationstation */opt/retropie/supplementary/emulationstation/emulationstation.sh*
+
+```
+#!/bin/sh
+
+esdir="$(dirname $0)"
+while true; do
+    rm -f /tmp/es-restart /tmp/es-sysrestart /tmp/es-shutdown
+    /opt/retropie/configs/all/autostart.sh
+    "$esdir/emulationstation" "$@"
+    ret=$?
+    [ -f /tmp/es-restart ] && continue
+    if [ -f /tmp/es-sysrestart ]; then
+        rm -f /tmp/es-sysrestart
+        sudo reboot
+        break
+    fi
+    if [ -f /tmp/es-shutdown ]; then
+        rm -f /tmp/es-shutdown
+	echo 2 > /dev/ttyUSB0
+        sudo poweroff
+        break
+    fi
+    break
+done
+exit $ret
+```
+
+## Background Music en Retrodiosa/Emulation Station (Deprecated)
 
 Se usa el repositiorio de https://github.com/Rydra/bgm-for-es para añadir background music a Retrodiosa. Se usa una instalación manual aunque el proyecto se indica una forma más automatizada.
 
