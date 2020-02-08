@@ -468,7 +468,29 @@ emulationstation
 
 Comprobar que se escucha la música de fondo
 
+
+## Subir/Bajar de volumen del televisor en Retrodiosa
+
+Para bajar y subir el sonido de retrodiosa se ha creado un menú en python curses que se puede ejecutar desde el menú de emulationstation. Buscar el icono con forma de televisor en emuladores.
+
+El script a ejecutar aparecerá como TV_VOLUME en el menú de emulationstation
+
+![MENU PYTHON CURSES](img/img/menu_retro.png)
+
+Al ejecutarlo aparecerá un menú con los comandos siguientes:
+
+
+* Eje X- del joystick para bajar el volumen
+* Eje X+ del joystick para subir el volumen
+* Cualquier botón para salir del menú.
+
+_NOTA: Ojo al mover el joystick ya que ahora mismo se almacenan los comandos en un buffer y se ejecutarán con un cierto retardo lo que puede provocar un aumento/disminución indeseada del volumen_
+
+
+
 ## Controlar el ruido de background 
+
+TODO
 
 
 ## Tareas pendientes
