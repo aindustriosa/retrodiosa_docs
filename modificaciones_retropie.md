@@ -484,8 +484,6 @@ Al ejecutarlo aparecerá un menú con los comandos siguientes:
 * Eje X+ del joystick para subir el volumen
 * Cualquier botón para salir del menú.
 
-_NOTA: Ojo al mover el joystick ya que ahora mismo se almacenan los comandos en un buffer y se ejecutarán con un cierto retardo lo que puede provocar un aumento/disminución indeseada del volumen_
-
 
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
