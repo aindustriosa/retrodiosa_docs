@@ -487,7 +487,6 @@ Al ejecutarlo aparecerá un menú con los comandos siguientes:
 
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
-3. Splash Screen Retrodiosa/A Industriosa para emulation station
-4. DBUS para apagar sin clave el portátil (desde emulationstation)
-5. Añadir menús para subir/bajar volumen de la pantalla
+2. Splash Screen Retrodiosa/A Industriosa para emulation station
+3. Apagar retrodiosa con un botón
 
