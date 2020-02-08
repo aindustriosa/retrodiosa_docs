@@ -487,12 +487,6 @@ Al ejecutarlo aparecerá un menú con los comandos siguientes:
 _NOTA: Ojo al mover el joystick ya que ahora mismo se almacenan los comandos en un buffer y se ejecutarán con un cierto retardo lo que puede provocar un aumento/disminución indeseada del volumen_
 
 
-
-## Controlar el ruido de background 
-
-TODO
-
-
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
 2. Crear un setup para automatizar la instalación de los scripts y la configuración de sistemas custom de A Industriosa.
