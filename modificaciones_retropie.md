@@ -475,7 +475,7 @@ Para bajar y subir el sonido de retrodiosa se ha creado un menú en python curse
 
 El script a ejecutar aparecerá como TV_VOLUME en el menú de emulationstation
 
-![MENU PYTHON CURSES](img/img/menu_retro.png)
+![MENU PYTHON CURSES](img/menu_retro.png)
 
 Al ejecutarlo aparecerá un menú con los comandos siguientes:
 
