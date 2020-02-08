@@ -489,7 +489,6 @@ _NOTA: Ojo al mover el joystick ya que ahora mismo se almacenan los comandos en 
 
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
-2. Crear un setup para automatizar la instalación de los scripts y la configuración de sistemas custom de A Industriosa.
 3. Splash Screen Retrodiosa/A Industriosa para emulation station
 4. DBUS para apagar sin clave el portátil (desde emulationstation)
 5. Añadir menús para subir/bajar volumen de la pantalla
