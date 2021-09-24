@@ -488,7 +488,7 @@ Al ejecutarlo aparecerá un menú con los comandos siguientes:
 
 Los botones para los dos jugadores se configuran de la siguiente manera tal como se muestra en la figura.
 
-![MENU PYTHON CURSES](img/)
+![BUTTON LAYOUT](img/retrodiosa_layoutp1.png)
 
 * 2 (Y)
 * 1 (X)
@@ -498,8 +498,6 @@ Los botones para los dos jugadores se configuran de la siguiente manera tal como
 * 6 (RIGHT SHOULDER)
 * 7 (start)
 * 8 (select): para configurar este botón introducir una moneda en el monedero
-
-
 
 
 ## Tareas pendientes
