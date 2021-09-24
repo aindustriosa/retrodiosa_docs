@@ -484,6 +484,23 @@ Al ejecutarlo aparecerá un menú con los comandos siguientes:
 * Eje X+ del joystick para subir el volumen
 * Cualquier botón para salir del menú.
 
+## Configuración de botones
+
+Los botones para los dos jugadores se configuran de la siguiente manera tal como se muestra en la figura.
+
+![MENU PYTHON CURSES](img/)
+
+* 2 (Y)
+* 1 (X)
+* 4 (B)
+* 5 (A)
+* 3 (LEFT SHOULDER)
+* 6 (RIGHT SHOULDER)
+* 7 (start)
+* 8 (select): para configurar este botón introducir una moneda en el monedero
+
+
+
 
 ## Tareas pendientes
 1. Limpiar/refactorizar el código de joylibgdxkey.py
