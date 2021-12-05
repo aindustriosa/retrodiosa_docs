@@ -469,6 +469,33 @@ emulationstation
 Comprobar que se escucha la música de fondo
 
 
+## Añadir Bezels 
+
+Descomprimir bezels in 
+
+```
+/opt/retropie/emulators/retroarch/overlays
+/opt/retropie/configs/all/retroarch/overlay
+```
+
+Para configurarlos, entrar en un juego y pulsar 
+
+«HotKey + X».
+
+_NOTA: el hotkey en retrodiosa es el <select> - <insert coin>
+
+Dentro del "Quick Menu", ir a la sección "Onscreen Overlay", y se configura:
+
+
+Luego configurar los parámetros como sigue:
+
+Overlay Opacity: 0.70
+Overlay Scale: 1.00
+
+En Overlay preset se puede seleccionar el fichero de configuración correspondiente al Overlay
+
+_NOTE: otra forma de añadirlos es mediante el proyecto https://github.com/thebezelproject/BezelProject_
+
 ## Subir/Bajar de volumen del televisor en Retrodiosa
 
 Para bajar y subir el sonido de retrodiosa se ha creado un menú en python curses que se puede ejecutar desde el menú de emulationstation. Buscar el icono con forma de televisor en emuladores.
@@ -498,6 +525,14 @@ Los botones para los dos jugadores se configuran de la siguiente manera tal como
 * 6 (RIGHT SHOULDER)
 * 7 (start)
 * 8 (select): para configurar este botón introducir una moneda en el monedero
+
+# Fichero de configuración de retroarch
+
+Los ficheros de configuración están en /opt/retropie/configs/
+
+Por defecto se usa el /opt/retropie/configs/all/retroarch.cfg pero este fichero se puede sobreescribir en cada emulador
+
+_NOTA: este fichero se puede sobreescribir desde el Quick Menu de retroarch. Esto puede causar problemas si en un futuro se actualiza el sistema pero no se actualiza dicha configuración_
 
 
 ## Tareas pendientes
