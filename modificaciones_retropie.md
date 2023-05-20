@@ -482,7 +482,8 @@ Para configurarlos, entrar en un juego y pulsar
 
 «HotKey + X».
 
-_NOTA: el hotkey en retrodiosa es el <select> - <insert coin>_
+_NOTA: el hotkey en retrodiosa es el *select* - *insert coin*_
+
 
 Dentro del "Quick Menu", ir a la sección "Onscreen Overlay", y se configura:
 
